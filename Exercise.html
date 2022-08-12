@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RegExp Exercise</title>
+</head>
+<body>
+</body>
+<script>
+  // let clientInput = prompt('Input your contact Information'); 
+
+  // let splitInput = clientInput.split(" ");
+  // console.log(splitInput)
+
+  // function checkMail(){
+  //   for (i=0; i < splitInput.length; i++){
+  //     let validateMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(splitInput[i])
+  //     console.log(validateMail)
+  //     if (validateMail === true){
+  //       splitInput[i].replaceAll(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]*@/g, "********@");
+  //       let answer = splitInput.toString(' ')
+  //       alert(answer)
+  //     }
+  //     else {continue;}
+  //   }
+  // }
+  // checkMail()
+
+  var userInput = prompt('kindly input your email address');
+      let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+       var input = validRegex.test(userInput)
+       console.log(input)
+       if (input == true){
+        var userInputs = userInput.replaceAll(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]*@/g, "********@")
+        
+                alert(`Your email address is ${userInputs}` )
+              }
+
+      else{
+        alert('Invalid Email')
+       }
+
+  
+  
+</script>
+</html>
